@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-function Home(props) {
+function Header(props) {
     return (
         <div>
             <div className="main-header">
@@ -32,9 +32,11 @@ function Home(props) {
                                     <NavLink exact to={"/"} className="nav-link scrollto">Home</NavLink>
                                 </li>
                                 <li><NavLink exact to={"/Departments"} className="nav-link scrollto">Departments</NavLink></li>
+                                <li>  <NavLink exact to={"/Medition"} className="nav-link scrollto">Medition</NavLink></li>
                                 <li> <NavLink exact to={"/Doctor"} className="nav-link scrollto">Doctors</NavLink></li>
                                 <li>  <NavLink exact to={"/About"} className="nav-link scrollto">About</NavLink></li>
                                 <li> <NavLink exact to={"/Contact"} className="nav-link scrollto">Contact</NavLink></li>
+
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle" />
                         </nav>
@@ -43,9 +45,9 @@ function Home(props) {
                             Appointment</NavLink>
                         <a href="#" >
                             <NavLink exact to={"/Auth"}>
-                            <span className="appointment-btn scrollto d-none d-md-inline">Login/ Signup</span>
+                                <span className="appointment-btn scrollto d-none d-md-inline">Login/ Signup</span>
                             </NavLink>
-                            
+
                         </a>
                     </div>
                 </header>
@@ -54,4 +56,4 @@ function Home(props) {
     );
 }
 
-export default Home;
+export default Header;
