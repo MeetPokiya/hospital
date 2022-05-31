@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import * as yup from 'yup';
 import { Form, Formik, useFormik } from 'formik';
 
-function Auth1(props) {
+function Auth(props) {
     const [userType, setUserType] = useState('Login')
     const [reset, setReset] = useState(false)
 
     const handletLogin = (values) => {
-        // alert(JSON.stringify(values, null, 2));
+         alert(JSON.stringify(values, null, 2));
         let data = JSON.parse(localStorage.getItem("users"))
 
         if (data === null) {
@@ -174,7 +174,7 @@ function Auth1(props) {
                                         </div>
                                 }
                                 {
-                                    reset ?
+                                    reset  === false?
                                         <div className="text-center">
                                             <button type="submit">Forgot password</button><br></br>
                                         </div>
@@ -221,4 +221,4 @@ function Auth1(props) {
 
 
 
-export default Auth1;
+export default Auth;
