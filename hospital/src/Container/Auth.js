@@ -16,7 +16,7 @@ function Auth(props) {
             data.push(values)
             localStorage.setItem("users", JSON.stringify(data))
         }
-
+        sessionStorage.setItem("user", "123456")
     }
 
     const handleSignup = (values) => {
@@ -25,7 +25,7 @@ function Auth(props) {
         if (data === null) {
             localStorage.setItem("users", JSON.stringify([values]))
         } else {
-            data.push(values)
+             data.push(values)
             localStorage.setItem("users", JSON.stringify(data))
         }
     }
@@ -79,6 +79,8 @@ function Auth(props) {
             email: ''
         }
     }
+ 
+
 
     const formik = useFormik({
         initialValues: initVal,
@@ -174,14 +176,9 @@ function Auth(props) {
                                         </div>
                                 }
                                 {
-                                    reset  === false?
-                                        <div className="text-center">
-                                            <button type="submit">Forgot password</button><br></br>
-                                        </div>
-                                        :
                                         userType === 'Login' ?
                                             <div className="text-center">
-                                                <button type="submit">Login</button><br></br>
+                                                <button type="submit">{reset ? "forgot password" : "Login"}</button><br></br>
                                             </div> :
                                             <div className="text-center">
                                                 <button type="submit">signup</button>
@@ -197,7 +194,7 @@ function Auth(props) {
                                             <div className='text-center mt-5'>
                                                 <span>create a New account ?</span>
                                                 <a onClick={() => { setUserType('Signup') }} >Signup</a> <br></br>
-                                                <a className='mt-3' onClick={() => { setReset(true) }}>Forget password</a>
+                                                <a className='mt-3' onClick={() => { setReset(true) }}>Forget password</a> ?
                                             </div> :
                                             <div className='text-center mt-5'>
                                                 <span>already have an account ?</span>

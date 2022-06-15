@@ -8,7 +8,7 @@ function Header(props) {
                     <div className="container d-flex justify-content-between">
                         <div className="contact-info d-flex align-items-center">
                             <i className="bi bi-envelope" /> <a href="mailto:contact@example.com">cityhospital@example.com</a>
-                            <i className="bi bi-phone" /> +91 9988776655
+                            <i className="bi bi-phone" /> +91 9632587412
                         </div>
                         <div className="d-none d-lg-flex social-links align-items-center">
                             <a href="#" className="twitter"><i className="bi bi-twitter" /></a>
